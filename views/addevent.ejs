@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <!-- <header>
+        
+    </header> -->
+
+    <section class="hero events-hero">
+        <div class="hero-content">
+            <h2>Add Events</h2>
+            <p>Create your events here</p>
+        </div>
+    </section><br><br>
+
+    <main>
+        <div class="create body">
+        
+            <form action="/events" method="POST">
+                <label for="eventName">Event name</label>
+                <input type="text" name="eventName" id="event-name" required>
+
+                <label for="month">Choose a month:</label>
+                <input list="months" id="month" name="month" placeholder="Select a month">
+                <datalist id="months">
+                    <option value="January">
+                    <option value="February">
+                    <option value="March">
+                    <option value="April">
+                    <option value="May">
+                    <option value="June">
+                    <option value="July">
+                    <option value="August">
+                    <option value="September">
+                    <option value="October">
+                    <option value="November">
+                    <option value="December">
+                </datalist>
+
+                <label for="day">Event day</label>
+                <input type="number" name="day" id="event-day" min="1" max="31" required>
+
+                <label for="time">Time</label>
+                <input type="time" name="time" id="event-time" required>
+
+                <label for="description">Event description</label>
+                <textarea name="description" id="event-description" required></textarea>
+
+                <label for="image">Choose Image: </label>
+                <input type="file" name="image" id="imageInput" accept="image/*">
+                <img id="imagePreview" src="" alt="">
+                <br><br>
+
+                <button>Submit</button>
+            </form>
+
+        </div>
+
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>

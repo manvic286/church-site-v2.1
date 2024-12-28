@@ -1,0 +1,44 @@
+:root {
+    /* Traditional Catholic colors with a modern twist */
+    --primary: #1B3C59;      /* Deep navy */
+    --secondary: #B8860B;    /* Dark golden */
+    --accent: #8B0000;       /* Deep red */
+    --light: #e4e4e4;        /* Off-white */
+    --dark: #2C2C2C;         /* Soft black */
+    --gold: #D4AF37;         /* Metallic gold */
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section {
+    h4 { color: var(--gold); margin-bottom: 1.5rem; }
+    ul { list-style: none; }
+    a { color: white; }
+    a:hover { color: var(--gold); }
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-block-start: 3rem;
+    padding-block-start: 2rem;
+    border-block-start: 1px solid rgba(255,255,255,0.1);
+}

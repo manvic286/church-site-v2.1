@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <!-- Events Hero Section -->
+    <section class="hero events-hero">
+        <div class="hero-content">
+            <h2>Upcoming Events</h2>
+            <p>Join us in fellowship and celebration</p>
+        </div>
+    </section>
+
+    <!-- Events List Section -->
+    <section class="events-container">
+        <% if(events.length > 0){ %>
+            <% events.forEach(event => { %> 
+                <a href="/event/<%= event._id %>" class="btn">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month"><%= event.month %></span>
+                            <span class="day"><%= event.day %></span>
+                        </div>
+                        <div class="event-details">
+                            <h3> <%= event.eventName %> </h3>
+                            <p class="event-time"><%= event.time %></p>
+                            <!-- <p class="event-location">Parish premises</p> -->
+                            <!-- <p class="event-description"> <%= event.description %> </p> -->
+                            
+                        </div>
+                    </div>
+                </a>
+            
+
+            <% }) %>
+        <% } else{ %> 
+        
+            <p>There are no upcoming events.....</p>
+
+        <% } %>
+        <!-- Add more event-card divs as needed -->
+    </section>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html> 
