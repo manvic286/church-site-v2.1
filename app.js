@@ -16,7 +16,8 @@ app.listen(PORT, () => {
 
 // MongoDB Connection
 // mongoose.connect('mongodb://localhost:27017/Events')
-mongoose.connect('mongodb+srv://manuelviotor:charleslwanga@charleslwanga.zj69b.mongodb.net/')
+//mongoose.connect('mongodb+srv://manuelviotor:charleslwanga@charleslwanga.zj69b.mongodb.net/')
+mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
 
 // Schemas
