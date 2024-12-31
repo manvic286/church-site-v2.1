@@ -38,7 +38,9 @@ const eventSchema = {
 const Event = mongoose.model('Event', eventSchema);
 
 app.get('/', (req, res) => {
-    res.render('index', {title: "Home"})
+    // res.render('index', {title: "Home"})
+    res.render('addevent', {title: "Create events"})
+
 })
 
 app.get('/events', (req, res) => {
@@ -54,10 +56,10 @@ app.get('/events', (req, res) => {
     
 })
 
-app.get('/about', (req, res) => {
+// app.get('/about', (req, res) => {
 
-    res.render('about', {title: "About Us"})
-})
+//     res.render('about', {title: "About Us"})
+// })
 
 app.post('/events', (req, res) => {
     const event = new Event(req.body)
@@ -82,15 +84,15 @@ app.get('/event/:id', (req, res) => {
         })
 });
 
-app.get('/add-event', (req, res) => {
+// app.get('/add-event', (req, res) => {
 
-    res.render('addevent', {title: "Create events"})
-})
+//     res.render('addevent', {title: "Create events"})
+// })
 
-app.get('/contact', (req, res) => {
+// app.get('/contact', (req, res) => {
 
-    res.render('contact', {title: "Contact Us"})
-})
+//     res.render('contact', {title: "Contact Us"})
+// })
 
 app.use((req, res) => {
     res.status(404).render('404', { title: '404' });
