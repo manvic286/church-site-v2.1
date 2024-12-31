@@ -37,11 +37,11 @@ const eventSchema = {
 
 const Event = mongoose.model('Event', eventSchema);
 
-// app.get('/', (req, res) => {
-//     // res.render('index', {title: "Home"})
-//     res.render('addevent', {title: "Create events"})
+app.get('/', (req, res) => {
+    // res.render('index', {title: "Home"})
+    res.render('addevent', {title: "Create events"})
 
-// })
+})
 
 app.get('/events', (req, res) => {
 
